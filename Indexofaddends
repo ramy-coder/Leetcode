@@ -1,0 +1,18 @@
+const findIndicestoTarget = (nums,target) => {
+  const hashmap = {};
+  for(let i=0;i<nums.length;i++)
+    {
+      console.log({i,value:nums[i]})
+      const cMapVal = hashmap[nums[i]];
+      if(cMapVal > 0)
+      {
+        return[cMapVal,i];
+      }
+      else
+      {
+        let ntf = target - nums[i];
+        hashmap[ntf] = i;
+      }
+    }
+  return null;
+}
