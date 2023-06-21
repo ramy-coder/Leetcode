@@ -4,7 +4,7 @@ const findIndicestoTarget = (nums,target) => {
     {
       console.log({i,value:nums[i]})
       const cMapVal = hashmap[nums[i]];
-      if(cMapVal > 0)
+      if(cMapVal >= 0)
       {
         return[cMapVal,i];
       }
